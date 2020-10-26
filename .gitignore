@@ -11,4 +11,4 @@ buildNumber.properties
 .mvn/wrapper/maven-wrapper.jar
 
 #Secret
-./src/main/java/Bot/Secret.java
+src/main/java/Bot/Secret.java
