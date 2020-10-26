@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b3250e9-cb3c-4d4f-b908-a3bd1399bc94" name="Default Changelist" comment="" />
+    <list default="true" id="1b3250e9-cb3c-4d4f-b908-a3bd1399bc94" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Bot/commands/Ping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Bot/commands/Ping.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,6 +34,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -23,10 +47,20 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Bot" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -61,6 +95,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="-1192" y="526" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603701237668">
       <screen x="-1920" y="185" width="1920" height="1080" />
@@ -70,26 +115,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="818" y="309" key="FileChooserDialogImpl/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603698976297" />
-    <state width="1921" height="294" key="GridCell.Tab.0.bottom" timestamp="1603700176830">
+    <state width="1921" height="294" key="GridCell.Tab.0.bottom" timestamp="1603704043884">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="294" key="GridCell.Tab.0.bottom/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603700176830" />
-    <state width="1921" height="294" key="GridCell.Tab.0.center" timestamp="1603700176830">
+    <state width="1921" height="294" key="GridCell.Tab.0.bottom/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603704043884" />
+    <state width="1921" height="294" key="GridCell.Tab.0.center" timestamp="1603704043884">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="294" key="GridCell.Tab.0.center/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603700176830" />
-    <state width="1921" height="294" key="GridCell.Tab.0.left" timestamp="1603700176830">
+    <state width="1921" height="294" key="GridCell.Tab.0.center/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603704043884" />
+    <state width="1921" height="294" key="GridCell.Tab.0.left" timestamp="1603704043883">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="294" key="GridCell.Tab.0.left/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603700176830" />
-    <state width="1921" height="294" key="GridCell.Tab.0.right" timestamp="1603700176830">
+    <state width="1921" height="294" key="GridCell.Tab.0.left/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603704043883" />
+    <state width="1921" height="294" key="GridCell.Tab.0.right" timestamp="1603704043884">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1921" height="294" key="GridCell.Tab.0.right/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603700176830" />
-    <state x="461" y="184" key="SettingsEditor" timestamp="1603698990918">
+    <state width="1921" height="294" key="GridCell.Tab.0.right/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603704043884" />
+    <state x="461" y="184" key="SettingsEditor" timestamp="1603702146732">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="184" key="SettingsEditor/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603698990918" />
+    <state x="461" y="184" key="SettingsEditor/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603702146732" />
+    <state x="769" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603703985097">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="769" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.185.1680.1050/0.0.1920.1080/-1920.185.1920.1080@0.0.1920.1080" timestamp="1603703985097" />
     <state x="342" y="150" key="new project wizard" timestamp="1603700604206">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

@@ -5,9 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>WetterBot</artifactId>
+    <artifactId>TutorialBot</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <build>
         <plugins>
             <plugin>
@@ -36,4 +35,5 @@
             <url>https://jcenter.bintray.com</url>
         </repository>
     </repositories>
+
 </project>
