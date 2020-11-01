@@ -1,6 +1,7 @@
 package Bot;
 
 import Bot.commands.Ping;
+import Bot.reactions.FriendlyGreeting;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -17,11 +18,10 @@ public class Main {
                 .setChunkingFilter(ChunkingFilter.ALL)
                 .setMemberCachePolicy(MemberCachePolicy.ALL)
                 .enableIntents(GatewayIntent.GUILD_MEMBERS)
-                //Add new Commands
-                .addEventListeners(new Ping())
+
                 //set Activity
                 .setActivity(Activity.watching("dich an L O L"))
-                
+                .addEventListeners(new Listener())
                 .build().awaitReady();
     }
 }
