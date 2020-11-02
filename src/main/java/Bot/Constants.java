@@ -1,3 +1,8 @@
+/**
+ * Author: Nikolai
+ * Projekt: WeatherBot
+ * ClassUsage: Put all "HardCoded" Text in one Class
+ */
 package Bot;
 
 public class Constants {

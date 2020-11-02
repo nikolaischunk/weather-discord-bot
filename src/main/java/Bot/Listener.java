@@ -1,3 +1,9 @@
+/**
+ * Author: Nikolai
+ * Projekt: WeatherBot
+ * ClassUsage: Signalise if the Bot is online.
+ * Could also be used to Shutdown
+ */
 package Bot;
 
 import net.dv8tion.jda.api.events.ReadyEvent;

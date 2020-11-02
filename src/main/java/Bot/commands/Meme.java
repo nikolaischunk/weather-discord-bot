@@ -1,10 +1,13 @@
+/**
+ * Author: Nikolai
+ * Projekt: WeatherBot
+ * ClassUsage: First TryOut to Work with an API
+ */
 package Bot.commands;
-
 
 import Bot.Command;
 import Bot.Constants;
 import Bot.tools.Tools;
-
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
@@ -13,34 +16,35 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.List;
 
+//First Attempt to work with a API
 public class Meme implements Command {
     @Override
     public void run(List<String> args, GuildMessageReceivedEvent event) {
-        if(args.isEmpty()) {
+        if (args.isEmpty()) {
             String title = "";
             String imageurl = "";
             String postlink = "";
             boolean isNsfw = false;
             boolean isSpoiler = false;
             try {
-                while(true) {
+                while (true) {
                     URL memeurl = new URL("https://meme-api.herokuapp.com/gimme");
                     BufferedReader bf = new BufferedReader(new InputStreamReader(memeurl.openConnection().getInputStream()));
                     String input = bf.readLine();
                     title = input.substring(input.indexOf("\"title\":") + "\"title\":\"".length(), input.indexOf("\",\"url\":"));
                     imageurl = input.substring(input.indexOf("\"url\":\"") + "\"url\":\"".length(), input.indexOf("\",\"nsfw\":"));
                     postlink = input.substring(input.indexOf("\"postLink\":\"") + "\"postLink\":\"".length(), input.indexOf("\",\"subreddit\":"));
-                    if(input.substring(input.indexOf("\"nsfw\":") + "\"nsfw\":".length(), input.indexOf(",\"spoiler\":")).equalsIgnoreCase("true")) {
+                    if (input.substring(input.indexOf("\"nsfw\":") + "\"nsfw\":".length(), input.indexOf(",\"spoiler\":")).equalsIgnoreCase("true")) {
                         isNsfw = true;
                     } else {
                         isNsfw = false;
                     }
-                    if(input.substring(input.indexOf(",\"spoiler\":") + ",\"spoiler\":".length(), input.indexOf("}")).equalsIgnoreCase("true")) {
+                    if (input.substring(input.indexOf(",\"spoiler\":") + ",\"spoiler\":".length(), input.indexOf("}")).equalsIgnoreCase("true")) {
                         isSpoiler = true;
                     } else {
                         isSpoiler = false;
                     }
-                    if(isNsfw == false && isSpoiler == false) {
+                    if (isNsfw == false && isSpoiler == false) {
                         break;
                     } else {
                         continue;
@@ -52,7 +56,7 @@ public class Meme implements Command {
                         .setImage(imageurl)
                         .setFooter(postlink)
                         .build()).queue();
-            } catch(Exception e) {
+            } catch (Exception e) {
                 event.getChannel().sendMessage("**Something went wrong!** Please try again later!").queue();
             }
         } else {

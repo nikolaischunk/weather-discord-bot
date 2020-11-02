@@ -1,3 +1,8 @@
+/**
+ * Author: Nikolai
+ * Projekt: WeatherBot
+ * MethodUsage: A TryOut Class to test how to implement Methods
+ */
 package Bot.commands;
 
 import Bot.Command;
@@ -11,21 +16,30 @@ public class Ping implements Command {
     @Override
     public void run(List<String> args, GuildMessageReceivedEvent event) {
         String msg = event.getMessage().getContentRaw();
+        //If Ping is called do that
         if(msg.equalsIgnoreCase(Constants.TutorialBotPrefix + "ping")){
-            //event.getChannel().sendMessage("Pong!").complete().editMessage(Long.toString(event.getJDA().getGatewayPing())).queue();
             event.getChannel().sendMessage("Pong!").queue(message -> {
                 message.editMessage(event.getJDA().getGatewayPing()+"ms").queue();
             });
+            //print that in command Line
             System.out.println("ping command excecuted");
         }
     }
 
+    /**
+     *
+     * @return the Command Name
+     */
     @Override
     public String getCommand() {
         return "ping";
     }
 
-    @Override //jo
+    /**
+     *
+     * @return the HelpMessage
+     */
+    @Override
     public String getHelp() {
         return "Gives you the Gateway Ping\n" +
                 "Usage: `" + Constants.TutorialBotPrefix + getCommand() + "`";

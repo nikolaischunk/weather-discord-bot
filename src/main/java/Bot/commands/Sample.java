@@ -1,3 +1,8 @@
+/**
+ * Author: Nikolai
+ * Projekt: WeatherBot
+ * ClassUsage: SampleClass for a COmmand to Showcase the build
+ */
 package Bot.commands;
 
 import Bot.Command;

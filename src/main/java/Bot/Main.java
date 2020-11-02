@@ -1,3 +1,8 @@
+/**
+ * Author: Nikolai
+ * Projekt: WeatherBot
+ * ClassUsage: StartBot Method
+ */
 package Bot;
 
 import Bot.commands.Ping;

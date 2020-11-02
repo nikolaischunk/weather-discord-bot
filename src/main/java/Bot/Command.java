@@ -1,3 +1,8 @@
+/**
+ * Author: Nikolai
+ * Projekt: WeatherBot
+ * ClassUsage: Interface for all Commands
+ */
 package Bot;
 
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;

@@ -1,3 +1,8 @@
+/**
+ * Author: Nikolai
+ * Projekt: WeatherBot
+ * ClassUsage: WeatherMethod
+ */
 package Bot.commands;
 
 import Bot.Command;
@@ -12,16 +17,19 @@ import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.net.URL;
 import java.net.URLConnection;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Wetter implements Command {
+public class Weather implements Command {
 
+    /**
+     * Mapt JSON Object into a Map
+     * @param str
+     * @return map
+     */
     public static Map<String, Object> jsonToMap(String str) {
         Map<String, Object> map = new Gson().fromJson(str, new
                 TypeToken<HashMap<String, Object>>() {
@@ -29,9 +37,14 @@ public class Wetter implements Command {
         return map;
     }
 
-
+    /**
+     * If the Command !weather is called, run is executed
+     * @param args
+     * @param event
+     */
     @Override
     public void run(List<String> args, GuildMessageReceivedEvent event) {
+        //If args = Empty the getHelp Message will be sent
         if (args.isEmpty()) {
             event.getChannel().sendMessage(getHelp()).queue();
             return;
@@ -41,7 +54,8 @@ public class Wetter implements Command {
         String city = args.get(1);
         String urlString = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + location + "&APPID=" + Secret.API_KEY;
 
-        try { //273,15 -> Kelvin
+        try {
+            // get ReturnValue of the API
             StringBuilder result = new StringBuilder();
             URL url = new URL(urlString);
             URLConnection conn = url.openConnection();
@@ -53,52 +67,61 @@ public class Wetter implements Command {
 
             rd.close();
 
+
             Map<String, Object> respMap = jsonToMap(result.toString());
-            String format_city = respMap.get("name").toString();
             Map<String, Object> sysMap = jsonToMap(respMap.get("sys").toString());
             Map<String, Object> mainMap = jsonToMap(respMap.get("main").toString());
-            System.out.println(respMap.get("weather"));
-            Map<String, Object> weatherMap = jsonToMap(respMap.get("weather").toString());
-            Map<String, Object> zeroMap = jsonToMap(weatherMap.get("0").toString());
 
-
+            //Variables
             double kelvin = 273.15;
             float temp = Float.parseFloat(mainMap.get("temp").toString());
             float feels_like = Float.parseFloat(mainMap.get("feels_like").toString());
             long temperature = Math.round(temp - kelvin);
             long feelslike = Math.round(feels_like - kelvin);
-            String description = zeroMap.get("description").toString();
 
-            
+            String format_city = respMap.get("name").toString();
+
+            /*Create the Embed Builder
+            Add Fields, Titel, Author, Image to the Embed
+            Look at Discord to watch the Embed
+            */
             EmbedBuilder builder = new EmbedBuilder();
             builder.setAuthor("WeatherBot");
             builder.setTitle("Weather in " + format_city + ", " + sysMap.get("country").toString());
             builder.addField("Temperature", "" + temperature + "°", false);
             builder.addField("Feels like", "" + feelslike + "°", false);
-            builder.addField("Weather", "" + description, false);
 
             builder.setFooter("Author: " + Constants.Author);
             builder.setThumbnail(Constants.ThumbnailBild);
 
             builder.setColor(Color.CYAN);
 
+            //Queued the Embed
             event.getChannel().sendMessage(builder.build()).queue();
 
         } catch (IOException e) {
+            //If there is a IOException print the Trace
             e.printStackTrace();
         }
 
         System.out.println(args.get(0));
     }
 
+    /**
+     * Commandname = !weather
+     * @return
+     */
     @Override
     public String getCommand() {
         return "weather";
     }
 
+    /**
+     * @return the HelpMessage + Usage
+     */
     @Override
     public String getHelp() {
-        return "Gives you a random meme!\n" +
+        return "Gives you the current Weather in a Specific City\n" +
                 "Usage: `" + Constants.TutorialBotPrefix + getCommand() + "` <countrycode> <cityname>";
     }
 }
