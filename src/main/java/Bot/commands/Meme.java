@@ -57,7 +57,7 @@ public class Meme implements Command {
                         .setFooter(postlink)
                         .build()).queue();
             } catch (Exception e) {
-                event.getChannel().sendMessage(Constants.MemeException).queue();
+                event.getChannel().sendMessage(Constants.memeException).queue();
             }
         } else {
             Tools.wrongUsage(event.getChannel(), this);
@@ -72,6 +72,6 @@ public class Meme implements Command {
     @Override
     public String getHelp() {
         return "Gives you a random meme!\n" +
-                "Usage: `" + Constants.TutorialBotPrefix + getCommand() + "`";
+                "Usage: `" + Constants.tutorialBotPrefix + getCommand() + "`";
     }
 }

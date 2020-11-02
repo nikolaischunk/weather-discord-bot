@@ -30,7 +30,7 @@ public class Help implements Command {
         //print the getCommand for every existing Command in a Formated Help Message
         if (args.isEmpty()) {
             EmbedBuilder e = new EmbedBuilder()
-                    .setTitle(Constants.HelpTitle);
+                    .setTitle(Constants.helpTitle);
             StringBuilder desc = e.getDescriptionBuilder();
             manager.getCommands().forEach(command -> {
                 desc.append("`").append(command.getCommand()).append("`\n");
@@ -41,7 +41,7 @@ public class Help implements Command {
         Command command = manager.getCommand(String.join("", args)); //!help nonexistingCommand
         if (command == null) {
             event.getChannel().sendMessage("Sorry, the command `" + String.join("", args) + "` doesnt exist\n" +
-                    "Use `" + Constants.TutorialBotPrefix + command.getCommand() + "` for a list of all my commands!");
+                    "Use `" + Constants.tutorialBotPrefix + command.getCommand() + "` for a list of all my commands!");
             return;
         }
         //If the arg exist Print HelpMessage for that Command
@@ -63,6 +63,6 @@ public class Help implements Command {
     @Override
     public String getHelp() {
         return "Gives you a List of existing Commands on this Bot\n" +
-                "Usage: `" + Constants.TutorialBotPrefix + getCommand() + "`";
+                "Usage: `" + Constants.tutorialBotPrefix + getCommand() + "`";
     }
 }

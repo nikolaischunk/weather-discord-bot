@@ -41,10 +41,10 @@ public class Manager {
 
     void run(GuildMessageReceivedEvent event) {
         final String msg = event.getMessage().getContentRaw();
-        if (!msg.startsWith(Constants.TutorialBotPrefix)) {
+        if (!msg.startsWith(Constants.tutorialBotPrefix)) {
             return;
         }
-        final String[] split = msg.replaceFirst("(?i)" + Pattern.quote(Constants.TutorialBotPrefix), "").split("\\s+");
+        final String[] split = msg.replaceFirst("(?i)" + Pattern.quote(Constants.tutorialBotPrefix), "").split("\\s+");
         final String command = split[0].toLowerCase();
         if (commands.containsKey(command)) {
             final List<String> args = Arrays.asList(split).subList(1, split.length);

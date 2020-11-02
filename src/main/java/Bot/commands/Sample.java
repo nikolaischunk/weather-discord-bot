@@ -26,6 +26,6 @@ public class Sample implements Command {
     @Override
     public String getHelp() {
         return "This is a Example Command\n" +
-                "Usage: `" + Constants.TutorialBotPrefix + getCommand() + "`";
+                "Usage: `" + Constants.tutorialBotPrefix + getCommand() + "`";
     }
 }

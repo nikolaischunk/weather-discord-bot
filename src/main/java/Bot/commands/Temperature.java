@@ -23,6 +23,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static Bot.Constants.*;
+
 public class Temperature implements Command {
 
     /**
@@ -86,13 +88,13 @@ public class Temperature implements Command {
             Look at Discord to watch the Embed
             */
             EmbedBuilder builder = new EmbedBuilder();
-            builder.setAuthor(Constants.Botname);
+            builder.setAuthor(botName);
             builder.setTitle("Temperature in " + format_city + ", " + sysMap.get("country").toString());
             builder.addField("Temperature", "" + temperature + "°", false);
             builder.addField("Feels like", "" + feelslike + "°", false);
 
-            builder.setFooter("Author: " + Constants.Author);
-            builder.setThumbnail(Constants.ThumbnailBild);
+            builder.setFooter("Author: " + author);
+            builder.setThumbnail(thumbnailBild);
 
             builder.setColor(Color.CYAN);
 
@@ -122,6 +124,6 @@ public class Temperature implements Command {
     @Override
     public String getHelp() {
         return "Gives you the current Temperature in a Specific City\n" +
-                "Usage: `" + Constants.TutorialBotPrefix + getCommand() + " <countrycode> <cityname>";
+                "Usage: `" + tutorialBotPrefix + getCommand() + " <countrycode> <cityname>`";
     }
 }

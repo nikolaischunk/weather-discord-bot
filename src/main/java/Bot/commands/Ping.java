@@ -17,12 +17,12 @@ public class Ping implements Command {
     public void run(List<String> args, GuildMessageReceivedEvent event) {
         String msg = event.getMessage().getContentRaw();
         //If Ping is called do that
-        if(msg.equalsIgnoreCase(Constants.TutorialBotPrefix + "ping")){
+        if(msg.equalsIgnoreCase(Constants.tutorialBotPrefix + "ping")){
             event.getChannel().sendMessage("Pong!").queue(message -> {
                 message.editMessage(event.getJDA().getGatewayPing()+"ms").queue();
             });
             //print that in command Line
-            System.out.println(Constants.PingExecuted);
+            System.out.println(Constants.pingExecuted);
         }
     }
 
@@ -42,6 +42,6 @@ public class Ping implements Command {
     @Override
     public String getHelp() {
         return "Gives you the Gateway Ping\n" +
-                "Usage: `" + Constants.TutorialBotPrefix + getCommand() + "`";
+                "Usage: `" + Constants.tutorialBotPrefix + getCommand() + "`";
     }
 }

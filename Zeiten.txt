@@ -1,0 +1,33 @@
+26.10.2020
+-> Für ein Projekt Entschieden
+-> Angefangen mich in die JDA Libary einzuarbeiten
+-> Projekt erstellt
+-> Erste TryOuts erstellt
+-> Tutorials angeschaut
+-> SampleClass erstellt
+-> Ping Command angefangen
+-> Bot erstellt
+
+28.10.2020
+-> Ping Command verbessert
+-> GitHub Probleme gehabt da man das Secret nicht Pushen Darf, mein Gitignore aber nicht funktioniert hat
+-> Angefangen HelpCommand zu machen
+-> Erste Schritte mit einer API (unzufrieden)
+
+31.10.2020
+-> API verbessert
+-> Meme Command erstellt
+
+01.11.2020
+-> TempCommand erstellt
+-> Etliche Bugs und Exceptions behoben
+-> Zugriff auf die API einfacher gemacht
+-> an HelpCommand gefeilt
+-> Push der gemachten Sachen
+
+02.11.2020
+-> Code Kommentiert
+-> JavaDocs geschrieben
+-> Diagramm erstellt
+-> Mehrere Pushs
+-> An letzen Funktionenn gefeilt

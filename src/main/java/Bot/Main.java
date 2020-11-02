@@ -23,7 +23,7 @@ public class Main {
                 .enableIntents(GatewayIntent.GUILD_MEMBERS)
 
                 //set Activity
-                .setActivity(Activity.watching("dich an L O L"))
+                .setActivity(Activity.watching(Constants.watchAcitvity))
                 .addEventListeners(new Listener())
                 .build().awaitReady();
     }
