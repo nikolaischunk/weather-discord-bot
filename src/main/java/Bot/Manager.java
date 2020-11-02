@@ -1,6 +1,6 @@
 /**
  * Author: Nikolai
- * Projekt: WeatherBot
+ * Project: TemperatureBot
  * ClassUsage: Manage all existing Commands
  */
 package Bot;
@@ -19,7 +19,7 @@ public class Manager {
         addCommand(new Ping());
         addCommand(new Help(this));
         addCommand(new Meme());
-        addCommand(new Weather());
+        addCommand(new Temperature());
     }
 
     private void addCommand(Command c) {

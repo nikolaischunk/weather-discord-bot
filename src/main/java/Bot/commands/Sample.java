@@ -1,6 +1,6 @@
 /**
  * Author: Nikolai
- * Projekt: WeatherBot
+ * Project: TemperatureBot
  * ClassUsage: SampleClass for a COmmand to Showcase the build
  */
 package Bot.commands;

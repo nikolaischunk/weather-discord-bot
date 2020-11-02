@@ -1,6 +1,6 @@
 /**
  * Author: Nikolai
- * Projekt: WeatherBot
+ * Project: TemperatureBot
  * ClassUsage: HelpCommand
  */
 package Bot.commands;
@@ -30,7 +30,7 @@ public class Help implements Command {
         //print the getCommand for every existing Command in a Formated Help Message
         if (args.isEmpty()) {
             EmbedBuilder e = new EmbedBuilder()
-                    .setTitle("A List of all my Commands");
+                    .setTitle(Constants.HelpTitle);
             StringBuilder desc = e.getDescriptionBuilder();
             manager.getCommands().forEach(command -> {
                 desc.append("`").append(command.getCommand()).append("`\n");

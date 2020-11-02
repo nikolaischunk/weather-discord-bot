@@ -1,6 +1,6 @@
 /**
  * Author: Nikolai
- * Projekt: WeatherBot
+ * Project: TemperatureBot
  * ClassUsage: Interface for all Commands
  */
 package Bot;

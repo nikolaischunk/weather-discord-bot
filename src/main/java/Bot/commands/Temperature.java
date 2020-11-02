@@ -1,7 +1,7 @@
 /**
  * Author: Nikolai
- * Projekt: WeatherBot
- * ClassUsage: WeatherMethod
+ * Projekt: TemperatureBot
+ * ClassUsage: TemperatureMethod
  */
 package Bot.commands;
 
@@ -23,7 +23,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Weather implements Command {
+public class Temperature implements Command {
 
     /**
      * Mapt JSON Object into a Map
@@ -38,7 +38,7 @@ public class Weather implements Command {
     }
 
     /**
-     * If the Command !weather is called, run is executed
+     * If the Command !temperature is called, run is executed
      * @param args
      * @param event
      */
@@ -86,8 +86,8 @@ public class Weather implements Command {
             Look at Discord to watch the Embed
             */
             EmbedBuilder builder = new EmbedBuilder();
-            builder.setAuthor("WeatherBot");
-            builder.setTitle("Weather in " + format_city + ", " + sysMap.get("country").toString());
+            builder.setAuthor(Constants.Botname);
+            builder.setTitle("Temperature in " + format_city + ", " + sysMap.get("country").toString());
             builder.addField("Temperature", "" + temperature + "°", false);
             builder.addField("Feels like", "" + feelslike + "°", false);
 
@@ -108,12 +108,12 @@ public class Weather implements Command {
     }
 
     /**
-     * Commandname = !weather
-     * @return
+     * Commandname = !temperature
+     * @return commandname
      */
     @Override
     public String getCommand() {
-        return "weather";
+        return "temp";
     }
 
     /**
@@ -121,7 +121,7 @@ public class Weather implements Command {
      */
     @Override
     public String getHelp() {
-        return "Gives you the current Weather in a Specific City\n" +
-                "Usage: `" + Constants.TutorialBotPrefix + getCommand() + "` <countrycode> <cityname>";
+        return "Gives you the current Temperature in a Specific City\n" +
+                "Usage: `" + Constants.TutorialBotPrefix + getCommand() + " <countrycode> <cityname>";
     }
 }

@@ -1,6 +1,6 @@
 /**
  * Author: Nikolai
- * Projekt: WeatherBot
+ * Project: TemperatureBot
  * MethodUsage: A TryOut Class to test how to implement Methods
  */
 package Bot.commands;
@@ -22,7 +22,7 @@ public class Ping implements Command {
                 message.editMessage(event.getJDA().getGatewayPing()+"ms").queue();
             });
             //print that in command Line
-            System.out.println("ping command excecuted");
+            System.out.println(Constants.PingExecuted);
         }
     }
 

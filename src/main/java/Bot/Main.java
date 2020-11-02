@@ -1,12 +1,10 @@
 /**
  * Author: Nikolai
- * Projekt: WeatherBot
+ * Project: TemperatureBot
  * ClassUsage: StartBot Method
  */
 package Bot;
 
-import Bot.commands.Ping;
-import Bot.reactions.FriendlyGreeting;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -19,7 +17,7 @@ import javax.security.auth.login.LoginException;
 public class Main {
     public static void main(String[] args) throws LoginException, InterruptedException {
 
-        JDA WetterBot = JDABuilder.createDefault(Secret.WetterBotToken)
+        JDA TemperaturBot = JDABuilder.createDefault(Secret.WetterBotToken)
                 .setChunkingFilter(ChunkingFilter.ALL)
                 .setMemberCachePolicy(MemberCachePolicy.ALL)
                 .enableIntents(GatewayIntent.GUILD_MEMBERS)

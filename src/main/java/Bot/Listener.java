@@ -1,6 +1,6 @@
 /**
  * Author: Nikolai
- * Projekt: WeatherBot
+ * Project: TemperatureBot
  * ClassUsage: Signalise if the Bot is online.
  * Could also be used to Shutdown
  */

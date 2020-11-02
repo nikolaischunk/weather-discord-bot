@@ -1,6 +1,6 @@
 /**
  * Author: Nikolai
- * Projekt: WeatherBot
+ * Project: TemperatureBot
  * ClassUsage: First TryOut to Work with an API
  */
 package Bot.commands;
@@ -57,7 +57,7 @@ public class Meme implements Command {
                         .setFooter(postlink)
                         .build()).queue();
             } catch (Exception e) {
-                event.getChannel().sendMessage("**Something went wrong!** Please try again later!").queue();
+                event.getChannel().sendMessage(Constants.MemeException).queue();
             }
         } else {
             Tools.wrongUsage(event.getChannel(), this);
